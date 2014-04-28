@@ -1,21 +1,21 @@
 package bags
 
-type bag struct {
+type Bag struct {
 	items []interface{}
 }
 
-func (b *bag) Add(item interface{}) {
+func (b *Bag) Add(item interface{}) {
 	b.items = append(b.items, item)
 }
 
-func (b *bag) IsEmpty() bool {
+func (b *Bag) IsEmpty() bool {
 	return len(b.items) == 0
 }
 
-func (b *bag) Size() int {
+func (b *Bag) Size() int {
 	return len(b.items)
 }
 
-func NewBag() *bag {
-	return &bag{}
+func NewBag() *Bag {
+	return &Bag{}
 }
